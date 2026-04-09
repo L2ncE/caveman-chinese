@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-04-09T00:00:00+00:00",
+  "generator": "Claude Opus 4.6 (1M context) via Claude Code — real model output, not scripted",
+  "pairs_file": "benchmarks/pairs.json",
+  "summary": {
+    "total_pairs": 25,
+    "non_exception_pairs": 22,
+    "exception_pairs": 3,
+    "avg_char_compression_rate": 0.542,
+    "max_char_compression_rate": 0.690,
+    "total_rule_violations": 0,
+    "exception_handling_pass": true,
+    "arrow_usage_count": 7,
+    "arrow_usage_rate": 0.318
+  },
+  "details": [
+    {
+      "id": "001", "category": "技术解释",
+      "normal_chars": 72,
+      "actual_output": "每次渲染新建对象引用 → React 认为 props 变 → 子组件重渲。用 `useMemo` 包。",
+      "actual_chars": 36,
+      "char_compression_rate": 0.500,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "002", "category": "技术解释",
+      "normal_chars": 67,
+      "actual_output": "TCP 三次握手：SYN → SYN-ACK → ACK。连接建立完成。",
+      "actual_chars": 24,
+      "char_compression_rate": 0.642,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "003", "category": "技术解释",
+      "normal_chars": 63,
+      "actual_output": "SQL 存在 N+1 问题：每次循环触发一次查询 → 性能差。改用 JOIN 或批量查询。",
+      "actual_chars": 35,
+      "char_compression_rate": 0.444,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "004", "category": "技术解释",
+      "normal_chars": 53,
+      "actual_output": "异步竞态条件导致 bug。`useEffect` 中添加清理函数。",
+      "actual_chars": 22,
+      "char_compression_rate": 0.585,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "005", "category": "技术解释",
+      "normal_chars": 65,
+      "actual_output": "rebase 重写历史（线性）；merge 保留分支历史（产生合并提交）。rebase 更干净，merge 更安全。",
+      "actual_chars": 43,
+      "char_compression_rate": 0.338,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "006", "category": "命令行/操作步骤",
+      "normal_chars": 57,
+      "actual_output": "cd 项目目录 → `npm install` → `npm run build`（耗时较长）→ `npm start`。",
+      "actual_chars": 34,
+      "char_compression_rate": 0.404,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "007", "category": "命令行/操作步骤",
+      "normal_chars": 67,
+      "actual_output": "`docker build -t myapp:latest .` → `docker run -p 8080:80 myapp:latest` → `docker ps`。",
+      "actual_chars": 39,
+      "char_compression_rate": 0.418,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "008", "category": "命令行/操作步骤",
+      "normal_chars": 72,
+      "actual_output": "`brew update` → `brew install python@3.11` → `python3.11 -m venv .venv` → `source .venv/bin/activate`。",
+      "actual_chars": 47,
+      "char_compression_rate": 0.347,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "009", "category": "命令行/操作步骤",
+      "normal_chars": 64,
+      "actual_output": "`git branch` → `git checkout main` → `git pull origin main` → `git merge feature/my-branch`。",
+      "actual_chars": 44,
+      "char_compression_rate": 0.312,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "010", "category": "命令行/操作步骤",
+      "normal_chars": 65,
+      "actual_output": "编辑 `/etc/nginx/nginx.conf`，添加 server block。端口 80 需 root 权限。`sudo systemctl restart nginx`。",
+      "actual_chars": 46,
+      "char_compression_rate": 0.292,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "011", "category": "错误诊断",
+      "normal_chars": 64,
+      "actual_output": "Python 3.8 与依赖不兼容。升级到 3.11，升级前检查依赖兼容性。",
+      "actual_chars": 28,
+      "char_compression_rate": 0.562,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "012", "category": "错误诊断",
+      "normal_chars": 63,
+      "actual_output": "JWT token 过期 → 刷新请求头 `Authorization`。检查 token 有效期配置是否过短。",
+      "actual_chars": 35,
+      "char_compression_rate": 0.444,
+      "is_exception": false,
+      "arrow_used": true,
+      "violation_count": 0
+    },
+    {
+      "id": "013", "category": "错误诊断",
+      "normal_chars": 64,
+      "actual_output": "`NullPointerException`：第 42 行对象未初始化。添加 null 检查，排查上游空值传入。",
+      "actual_chars": 35,
+      "char_compression_rate": 0.453,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "014", "category": "错误诊断",
+      "normal_chars": 65,
+      "actual_output": "500 错误：数据库连接池耗尽。`max_connections` 从 10 调整到 50。",
+      "actual_chars": 26,
+      "char_compression_rate": 0.600,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "015", "category": "配置说明",
+      "normal_chars": 55,
+      "actual_output": "`config.yaml` 设 `timeout: 30`，超 30s 请求自动终止。",
+      "actual_chars": 24,
+      "char_compression_rate": 0.564,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "016", "category": "配置说明",
+      "normal_chars": 67,
+      "actual_output": "`.env` 设 `DATABASE_URL=postgresql://user:pass@localhost:5432/mydb`。生产环境密码不要硬编码。",
+      "actual_chars": 43,
+      "char_compression_rate": 0.358,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "017", "category": "配置说明",
+      "normal_chars": 61,
+      "actual_output": "`application.yml` 添加 Redis：`spring.redis.host=127.0.0.1`，端口 6379。重启生效。",
+      "actual_chars": 38,
+      "char_compression_rate": 0.377,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "018", "category": "安全/破坏性操作",
+      "normal_chars": 43,
+      "actual_output": "警告：执行 `rm -rf /var/data` 将永久删除该目录下所有文件，此操作不可逆，请确认已备份数据后再执行。",
+      "actual_chars": 43,
+      "char_compression_rate": 0.000,
+      "is_exception": true,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "019", "category": "安全/破坏性操作",
+      "normal_chars": 55,
+      "actual_output": "警告：`DROP TABLE users` 将删除整张用户表及所有数据，操作不可回滚。请先执行 `CREATE TABLE users_backup AS SELECT * FROM users` 备份后再操作。",
+      "actual_chars": 55,
+      "char_compression_rate": 0.000,
+      "is_exception": true,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "020", "category": "安全/破坏性操作",
+      "normal_chars": 63,
+      "actual_output": "危险：`git push --force origin main` 会强制覆盖远程 main 分支的历史，其他人的提交可能丢失。建议使用 `git push --force-with-lease` 替代，或确认团队已知晓。",
+      "actual_chars": 63,
+      "char_compression_rate": 0.000,
+      "is_exception": true,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "021", "category": "混合场景",
+      "normal_chars": 71,
+      "actual_output": "Kafka 消费者消息积压。增加消费者实例，监控 `consumer_lag`。",
+      "actual_chars": 24,
+      "char_compression_rate": 0.662,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "022", "category": "混合场景",
+      "normal_chars": 72,
+      "actual_output": "Docker 镜像过大：基础镜像改用 `alpine` 替代 `ubuntu`，配合 `.dockerignore` 排除不必要文件。",
+      "actual_chars": 40,
+      "char_compression_rate": 0.444,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "023", "category": "混合场景",
+      "normal_chars": 68,
+      "actual_output": "API 响应 >2000ms：慢查询或缓存未命中。用 `EXPLAIN ANALYZE` 定位瓶颈。",
+      "actual_chars": 30,
+      "char_compression_rate": 0.559,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "024", "category": "混合场景",
+      "normal_chars": 71,
+      "actual_output": "CI/CD 卡在单元测试：测试用例含真实网络请求未 mock。改用 `pytest-mock`，构建时间明显缩短。",
+      "actual_chars": 40,
+      "char_compression_rate": 0.437,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    },
+    {
+      "id": "025", "category": "混合场景",
+      "normal_chars": 89,
+      "actual_output": "Go 程序 goroutine 泄漏。用 `pprof` 分析，每个 goroutine 需有明确退出条件，用 context 控制生命周期。",
+      "actual_chars": 43,
+      "char_compression_rate": 0.517,
+      "is_exception": false,
+      "arrow_used": false,
+      "violation_count": 0
+    }
+  ]
+}

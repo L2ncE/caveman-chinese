@@ -1,0 +1,227 @@
+[
+  {
+    "id": "001",
+    "category": "技术解释",
+    "tags": ["客套开场", "解释性赘述", "不确定措辞"],
+    "normal": "好的，我来帮你解释一下。这个问题出现的原因是每次渲染都会创建一个新的对象引用，导致 React 认为 props 发生了变化，从而触发子组件重新渲染。建议你可以用 `useMemo` 包裹这个对象，这也许会有效地解决问题。",
+    "compressed": "每次渲染新建对象引用 → React 认为 props 变 → 子组件重渲。用 `useMemo` 包。",
+    "expected_rules_triggered": ["greeting", "explanatory", "uncertainty"],
+    "notes": "SKILL.md 核心示例"
+  },
+  {
+    "id": "002",
+    "category": "技术解释",
+    "tags": ["客套开场", "过渡废话", "程度副词"],
+    "normal": "当然，这是个好问题。首先，你需要了解 TCP 三次握手的基本原理。其次，客户端发送 SYN 包，服务端回复 SYN-ACK，最后客户端再发 ACK 完成连接。这个过程非常重要，是网络通信的基础。",
+    "compressed": "TCP 三次握手：SYN → SYN-ACK → ACK。连接建立完成。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "degree_adverb"],
+    "notes": "过渡词全删，客户端/服务端缩为首字母方向箭头"
+  },
+  {
+    "id": "003",
+    "category": "技术解释",
+    "tags": ["解释性赘述", "程度副词", "不确定措辞", "术语缩写"],
+    "normal": "这意味着，你的 SQL 查询可能存在 N+1 问题。也就是说，每次循环都会触发一次数据库查询，这会非常严重地影响性能。换句话说，你应该考虑使用 JOIN 或批量查询来优化。",
+    "compressed": "SQL N+1：每次循环触发一次 DB 查询 → 性能差。改用 JOIN 或批量查询。",
+    "expected_rules_triggered": ["explanatory", "degree_adverb", "uncertainty"],
+    "notes": "数据库→DB，三个解释性赘述词全删"
+  },
+  {
+    "id": "004",
+    "category": "技术解释",
+    "tags": ["客套开场", "不确定措辞", "程度副词", "术语缩写"],
+    "normal": "明白了，我来看看。这个 bug 可能是由于异步竞态条件引起的。我认为你可以考虑在 `useEffect` 中添加清理函数，这也许会相当有效地解决问题。",
+    "compressed": "异步竞态条件导致 bug。`useEffect` 中加清理 fn。",
+    "expected_rules_triggered": ["greeting", "uncertainty", "degree_adverb"],
+    "notes": "函数→fn"
+  },
+  {
+    "id": "005",
+    "category": "技术解释",
+    "tags": ["过渡废话", "解释性赘述"],
+    "normal": "值得注意的是，Git rebase 和 merge 的区别在于提交历史。综上所述，rebase 会重写提交历史，使其线性；而 merge 会保留分支历史，产生一个合并提交。换句话说，rebase 更干净，merge 更安全。",
+    "compressed": "rebase 重写历史（线性）；merge 保留分支历史。rebase 更干净，merge 更安全。",
+    "expected_rules_triggered": ["filler_transition", "explanatory"],
+    "notes": "技术对比，结论保留完整"
+  },
+  {
+    "id": "006",
+    "category": "命令行/操作步骤",
+    "tags": ["客套开场", "过渡废话", "不确定措辞", "解释性赘述", "术语缩写"],
+    "normal": "好的，我来帮你一步步操作。首先，你需要切换到项目目录，也就是说进入你的工程文件夹。然后，你可以考虑运行 `npm install` 来安装所有的依赖包。接着执行 `npm run build` 进行构建，这个过程可能需要相当长的时间，值得注意的是构建产物会输出到 dist 目录。最后，用 `npm start` 启动服务。",
+    "compressed": "cd 项目 dir → `npm install`（装 deps）→ `npm run build`（产物在 dist）→ `npm start`。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "uncertainty", "explanatory"],
+    "notes": "目录→dir，依赖→deps，大量废话层"
+  },
+  {
+    "id": "007",
+    "category": "命令行/操作步骤",
+    "tags": ["客套开场", "过渡废话", "解释性赘述", "术语缩写"],
+    "normal": "好的，我来告诉你如何部署容器化应用。首先，确保已安装 Docker，也就是说你的机器上需要有容器运行环境。其次，构建镜像：`docker build -t myapp:latest .`，这意味着会生成一个新的容器镜像。然后，运行容器：`docker run -p 8080:80 myapp:latest`。最后检查容器状态：`docker ps`。",
+    "compressed": "`docker build -t myapp:latest .`（生成 img）→ `docker run -p 8080:80 myapp:latest`（起 ctr）→ `docker ps` 查状态。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "explanatory"],
+    "notes": "镜像→img，容器→ctr"
+  },
+  {
+    "id": "008",
+    "category": "命令行/操作步骤",
+    "tags": ["客套开场", "过渡废话", "不确定措辞", "解释性赘述", "术语缩写"],
+    "normal": "当然，我来帮你搭建 Python 开发环境。首先，你可能需要先更新 Homebrew 包管理器：`brew update`。然后，你可以考虑安装 Python 3.11：`brew install python@3.11`。接着，建议你创建虚拟环境，也就是说为项目隔离依赖包：`python3.11 -m venv .venv`。最后激活虚拟环境：`source .venv/bin/activate`。",
+    "compressed": "`brew update` → `brew install python@3.11` → `python3.11 -m venv .venv`（隔离 deps）→ `source .venv/bin/activate`。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "uncertainty", "explanatory"],
+    "notes": "依赖→deps，大量废话层"
+  },
+  {
+    "id": "009",
+    "category": "命令行/操作步骤",
+    "tags": ["客套开场", "过渡废话", "程度副词", "解释性赘述", "术语缩写"],
+    "normal": "好的，我来帮你操作 Git 分支。首先查看当前所在的分支：`git branch`，这非常重要，换句话说你需要确认自己在正确的分支上。然后切换到 main 分支：`git checkout main`。接着拉取远程仓库的最新代码：`git pull origin main`。最后合并你的功能分支：`git merge feature/my-branch`。",
+    "compressed": "`git branch` 确认当前分支 → `git checkout main` → `git pull origin main` → `git merge feature/my-branch`。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "degree_adverb", "explanatory"],
+    "notes": "命令完整保留，废话全删"
+  },
+  {
+    "id": "010",
+    "category": "命令行/操作步骤",
+    "tags": ["客套开场", "过渡废话", "解释性赘述", "不确定措辞", "术语缩写"],
+    "normal": "当然，我来帮你配置 nginx。首先编辑配置文件 `/etc/nginx/nginx.conf`，也就是说你需要打开这个文本文件进行修改。然后添加 server block，这意味着你在告诉 nginx 监听哪个端口。值得注意的是，端口 80 需要 root 权限，你可能需要用 sudo。最后重启服务：`sudo systemctl restart nginx`。",
+    "compressed": "编辑 `/etc/nginx/nginx.conf`，加 server block。端口 80 需 root（用 sudo）。`sudo systemctl restart nginx`。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "explanatory", "uncertainty"],
+    "notes": "路径原样保留，废话全删"
+  },
+  {
+    "id": "011",
+    "category": "错误诊断",
+    "tags": ["不确定措辞", "程度副词", "过渡废话", "术语缩写"],
+    "normal": "综上所述，这个错误可能是由于 Python 版本不兼容导致的。我认为你可以考虑将 Python 从 3.8 升级到 3.11，这也许会非常有效地解决问题。值得注意的是，升级前需要先检查依赖兼容性。",
+    "compressed": "Python 3.8 与 deps 不兼容。升级到 3.11，先查 deps 兼容性。",
+    "expected_rules_triggered": ["filler_transition", "uncertainty", "degree_adverb"],
+    "notes": "依赖→deps，版本号精确保留"
+  },
+  {
+    "id": "012",
+    "category": "错误诊断",
+    "tags": ["客套开场", "不确定措辞", "解释性赘述", "术语缩写"],
+    "normal": "好的，我来分析一下这个报错。这意味着你的 JWT token 已过期。换句话说，你需要在请求头中刷新 `Authorization` 字段。我认为这可能是因为 token 有效期配置太短了。",
+    "compressed": "JWT token 过期 → 刷新请求头 `Authorization`。查 token 有效期 config 是否过短。",
+    "expected_rules_triggered": ["greeting", "explanatory", "uncertainty"],
+    "notes": "配置→config，检查→查"
+  },
+  {
+    "id": "013",
+    "category": "错误诊断",
+    "tags": ["过渡废话", "不确定措辞", "程度副词"],
+    "normal": "首先，这个 `NullPointerException` 可能是因为对象未初始化。其次，你可以考虑在第 42 行添加 null 检查。这会非常有效地防止崩溃。最后，建议你也检查一下调用链上游是否有空值传入。",
+    "compressed": "`NullPointerException`：第 42 行对象未初始化。加 null 检查，排查上游空值传入。",
+    "expected_rules_triggered": ["filler_transition", "uncertainty", "degree_adverb"],
+    "notes": "行号 42 精确保留"
+  },
+  {
+    "id": "014",
+    "category": "错误诊断",
+    "tags": ["客套开场", "不确定措辞", "解释性赘述", "程度副词", "术语缩写"],
+    "normal": "明白了，我来看看这个 500 错误。这意味着服务器内部出现了问题。可能是数据库连接池耗尽了，我认为你可以考虑将 `max_connections` 从 10 调整到 50，这也许会相当明显地改善情况。",
+    "compressed": "500：DB 连接池耗尽。`max_connections` 从 10 调到 50。",
+    "expected_rules_triggered": ["greeting", "explanatory", "uncertainty", "degree_adverb"],
+    "notes": "数据库→DB，数字精确保留"
+  },
+  {
+    "id": "015",
+    "category": "配置说明",
+    "tags": ["客套开场", "解释性赘述", "术语缩写"],
+    "normal": "当然，明白了。换句话说，你需要在 `config.yaml` 里把 `timeout` 设为 30，也就是说超过 30 秒的请求会被自动终止。这是个好问题，很多人都会忽略这个配置。",
+    "compressed": "`config.yaml` 设 `timeout: 30`，超 30s 请求自动终止。",
+    "expected_rules_triggered": ["greeting", "explanatory"],
+    "notes": "数字 30 精确保留"
+  },
+  {
+    "id": "016",
+    "category": "配置说明",
+    "tags": ["过渡废话", "不确定措辞", "术语缩写"],
+    "normal": "首先，你可能需要在 `.env` 文件中配置数据库连接。然后，你可以考虑设置 `DATABASE_URL=postgresql://user:pass@localhost:5432/mydb`。值得注意的是，生产环境的密码不要硬编码。",
+    "compressed": "`.env` 设 `DATABASE_URL=postgresql://user:pass@localhost:5432/mydb`。生产 env 密码不要硬编码。",
+    "expected_rules_triggered": ["filler_transition", "uncertainty"],
+    "notes": "环境变量→env，连接字符串完整保留"
+  },
+  {
+    "id": "017",
+    "category": "配置说明",
+    "tags": ["客套开场", "过渡废话", "程度副词", "术语缩写"],
+    "normal": "好的，我来帮你配置 Redis 缓存。首先在 `application.yml` 中添加 Redis 配置，端口默认是 6379。然后，设置 `spring.redis.host=127.0.0.1`，这非常简单。最后重启应用即可生效。",
+    "compressed": "`application.yml` 加 Redis config：`spring.redis.host=127.0.0.1`，端口 6379。重启生效。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "degree_adverb"],
+    "notes": "配置→config，端口 6379 精确保留"
+  },
+  {
+    "id": "018",
+    "category": "安全/破坏性操作",
+    "tags": ["exception_safety"],
+    "normal": "警告：执行 `rm -rf /var/data` 将永久删除该目录下所有文件，此操作不可逆，请确认已备份数据后再执行。",
+    "compressed": "警告：执行 `rm -rf /var/data` 将永久删除该目录下所有文件，此操作不可逆，请确认已备份数据后再执行。",
+    "expected_rules_triggered": [],
+    "notes": "例外：破坏性操作，不压缩"
+  },
+  {
+    "id": "019",
+    "category": "安全/破坏性操作",
+    "tags": ["exception_safety"],
+    "normal": "警告：`DROP TABLE users` 将删除整张用户表及所有数据，操作不可回滚。请先执行 `CREATE TABLE users_backup AS SELECT * FROM users` 备份后再操作。",
+    "compressed": "警告：`DROP TABLE users` 将删除整张用户表及所有数据，操作不可回滚。请先执行 `CREATE TABLE users_backup AS SELECT * FROM users` 备份后再操作。",
+    "expected_rules_triggered": [],
+    "notes": "例外：DROP TABLE，不压缩"
+  },
+  {
+    "id": "020",
+    "category": "安全/破坏性操作",
+    "tags": ["exception_safety"],
+    "normal": "危险：`git push --force origin main` 会强制覆盖远程 main 分支的历史，其他人的提交可能丢失。建议使用 `git push --force-with-lease` 替代，或确认团队已知晓。",
+    "compressed": "危险：`git push --force origin main` 会强制覆盖远程 main 分支的历史，其他人的提交可能丢失。建议使用 `git push --force-with-lease` 替代，或确认团队已知晓。",
+    "expected_rules_triggered": [],
+    "notes": "例外：force push，不压缩"
+  },
+  {
+    "id": "021",
+    "category": "混合场景",
+    "tags": ["客套开场", "过渡废话", "不确定措辞", "解释性赘述", "程度副词", "术语缩写"],
+    "normal": "好的，我来帮你分析一下。首先，这意味着你的 Kafka 消费者可能存在消息积压问题。其次，我认为你可以考虑增加消费者实例数量，这也许会非常显著地提升消费速度。最后，建议你监控 `consumer_lag` 指标。",
+    "compressed": "Kafka 消费者积压。增加实例，监控 `consumer_lag`。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "uncertainty", "explanatory", "degree_adverb"],
+    "notes": "五类规则同时触发，极致压缩"
+  },
+  {
+    "id": "022",
+    "category": "混合场景",
+    "tags": ["客套开场", "过渡废话", "不确定措辞", "程度副词", "术语缩写"],
+    "normal": "当然，明白了。首先，你的 Docker 镜像可能过大，我认为这是因为基础镜像选择不当。其次，你可以考虑使用 `alpine` 替代 `ubuntu`，这也许会相当大幅度地减小镜像体积。最后，别忘了用 `.dockerignore` 排除不必要文件。",
+    "compressed": "Docker img 过大：基础 img 改用 `alpine`，配合 `.dockerignore` 排除不必要文件。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "uncertainty", "degree_adverb"],
+    "notes": "镜像→img，两处替换"
+  },
+  {
+    "id": "023",
+    "category": "混合场景",
+    "tags": ["客套开场", "解释性赘述", "不确定措辞", "程度副词", "术语缩写"],
+    "normal": "这是个好问题。这意味着你的 API 响应时间超过了 2000ms。也就是说，可能存在慢查询或缓存未命中的问题。我认为你可以考虑用 `EXPLAIN ANALYZE` 分析 SQL，这也许会非常有效地定位瓶颈。",
+    "compressed": "API 响应 >2000ms：慢查询或缓存未命中。用 `EXPLAIN ANALYZE` 查 DB 瓶颈。",
+    "expected_rules_triggered": ["greeting", "explanatory", "uncertainty", "degree_adverb"],
+    "notes": "数据库→DB，检查→查，数字精确保留"
+  },
+  {
+    "id": "024",
+    "category": "混合场景",
+    "tags": ["过渡废话", "不确定措辞", "解释性赘述", "术语缩写"],
+    "normal": "首先，换句话说，你的 CI/CD 流水线可能卡在了单元测试阶段。其次，我认为这是因为测试用例中存在网络请求，没有 mock。值得注意的是，你可以考虑用 `pytest-mock` 替代真实请求。最后，这也许会显著缩短构建时间。",
+    "compressed": "CI/CD 卡在单测：含真实网络请求未 mock。改用 `pytest-mock`，构建时间明显缩短。",
+    "expected_rules_triggered": ["filler_transition", "uncertainty", "explanatory"],
+    "notes": "pytest-mock 包名保留"
+  },
+  {
+    "id": "025",
+    "category": "混合场景",
+    "tags": ["客套开场", "过渡废话", "不确定措辞", "解释性赘述", "程度副词", "术语缩写"],
+    "normal": "好的，我来帮你看看这个内存泄漏。首先，这意味着你的 Go 程序可能存在 goroutine 泄漏。其次，我认为你可以考虑使用 `pprof` 工具分析，这也许会非常直观地展示问题所在。换句话说，每个启动的 goroutine 都需要有明确的退出条件。最后，建议你用 context 控制生命周期。",
+    "compressed": "Go goroutine 泄漏。用 `pprof` 查，每个 goroutine 需有退出条件，用 context 控生命周期。",
+    "expected_rules_triggered": ["greeting", "filler_transition", "uncertainty", "explanatory", "degree_adverb"],
+    "notes": "五类规则全覆盖，检查→查"
+  }
+]
